@@ -1,3 +1,5 @@
+console.log('loading app.js')
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -5,12 +7,13 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var index = require('./../../app_server/routes/index');
-var users = require('./../../app_server/routes/users');
+var index = require('./app_server/routes/index');
+var users = require('./app_server/routes/users');
 
 var app = express();
 
 // view engine setup
+console.log(path.join(__dirname, 'app_server', 'views'));
 app.set('views', path.join(__dirname, 'app_server', 'views'));
 app.set('view engine', 'jade');
 
