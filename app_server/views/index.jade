@@ -5,7 +5,7 @@ block content
   p Welcome to #{title}
   #header-container
     header.wrapper.clearfix
-      h1#title Joe's Node.js Website
+      h1#title AdWords Dashboard Template
       nav
         ul
           li
@@ -18,8 +18,27 @@ block content
     #main.wrapper.clearfix
       each d in data
         .col-xs-12.list-group-item
-          p= d.Keyword
-          p= d.Clicks
+          //p= d["Ad group"]
+          //p= d.Keyword
+          //p= d.Clicks
+          //p= d["Match type"]
+
+          table(border='1', cellpadding='10', cellspacing='10')
+            tr
+              th Ad Group
+              th Keyword
+              th Clicks
+              th Match Type
+              th Cost
+              th Conversions
+            tr
+              td= d["Ad group"]
+              td= d.Keyword
+              td= d.Clicks
+              td= d["Match type"]
+              td= d.Cost
+              td= d.Conversions
+
     // #main
   // #main-container
 
