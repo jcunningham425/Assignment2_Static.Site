@@ -23,10 +23,11 @@ block content
           //p= d.Clicks
           //p= d["Match type"]
 
-          table(border='1', cellpadding='10', cellspacing='10')
+          table.table(border='1', cellpadding='10', cellspacing='10')
             tr
               th Ad Group
               th Keyword
+              th Impressions
               th Clicks
               th Match Type
               th Cost
@@ -34,6 +35,7 @@ block content
             tr
               td= d["Ad group"]
               td= d.Keyword
+              td= d.Impressions
               td= d.Clicks
               td= d["Match type"]
               td= d.Cost
