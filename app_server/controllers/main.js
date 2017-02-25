@@ -3,20 +3,6 @@
  */
 /* GET home page */
 module.exports.index = function(req, res){
-    //var id = req.param('');
-    //var fName = req.param('firstName');
-
-    // read a CSV file
-    var csvParser = new SimpleExcel.Parser.CSV();
-    var fileInput = document.getElementById('fileInput');
-    // parse when file loaded, then print the result to console
-    fileInput.addEventListener('change', function (e) {
-        var file = e.target.files[0];
-        csvParser.loadFile(file, function () {
-            console.log(csvParser.getSheet()); // print!
-        });
-    });
-
 
     var data = getData();
 
