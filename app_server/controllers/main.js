@@ -7,7 +7,7 @@ const csv = require('csvtojson');
 
 module.exports.index = function(req, res){
     csv()
-        .fromFile('data/results.csv')
+        .fromFile('data/AdWords_Data_Example.csv')
         .on('end_parsed',function(jsonArray){
             res.render('index', {title: 'Express', data: jsonArray});
         });
