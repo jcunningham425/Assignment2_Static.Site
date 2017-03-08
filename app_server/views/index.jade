@@ -16,26 +16,25 @@ block content
             a(href='#') Contact
   #main-container
     #main.wrapper.clearfix
-      each d in data
-        .col-xs-12.list-group
-
-        table.table.table-bordered
-          tr
-            th Ad Group
-            th Keyword
-            th Impressions
-            th Clicks
-            th Match Type
-            th Cost
-            th Conversions
-          tr
-            td= d["Ad group"]
-            td= d.Keyword
-            td= d.Impressions
-            td= d.Clicks
-            td= d["Match type"]
-            td= d.Cost
-            td= d.Conversions
+      table.table.table-bordered
+        thead
+          th Ad Group
+          th Keyword
+          th Impressions
+          th Clicks
+          th Match Type
+          th Cost
+          th Conversions
+        tbody
+          each d in data
+            tr
+              td= d["Ad group"]
+              td= d.Keyword
+              td= d.Impressions
+              td= d.Clicks
+              td= d["Match type"]
+              td= d.Cost
+              td= d.Conversions
 
 
 
