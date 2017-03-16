@@ -5,3 +5,6 @@
 $(document).ready(function() {
     $('#mainTable').DataTable();
 } );
+$(document).ready(function() {
+    ('#mainTable').DataTable();
+} );
